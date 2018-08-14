@@ -2,8 +2,7 @@ FROM openjdk:8-alpine
 
 RUN apk add --no-cache  curl grep sed unzip
 
-# Set timezone to CST
-ENV TZ=America/Chicago
+ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR /root
